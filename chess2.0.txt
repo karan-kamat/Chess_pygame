@@ -1,0 +1,15 @@
+2.0
+--Tick
+--check
+check from any piece
+--Option of choosing only if has possible moves
+-you win
+pawn promotion
+
+3.0
+display color to play
+display piece when selected
+
+4.0
+en passe
+casteling
