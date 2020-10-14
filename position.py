@@ -1,7 +1,7 @@
 class pos:
     def __init__(self, x, y):
-        self.size_of_chessboard=8
-        if 0 <= x < self.size_of_chessboard and 0 <= y < self.size_of_chessboard:
+        self.chessboard_length=8
+        if 0 <= x < self.chessboard_length and 0 <= y < self.chessboard_length:
             self.x = x
             self.y = y
         else:
@@ -18,7 +18,7 @@ class pos:
         return f"({self.x},{self.y})"
 
     def isillegal(self):
-        if 0 <= self.x < self.size_of_chessboard and 0 <= self.y < self.size_of_chessboard:
+        if 0 <= self.x < self.chessboard_length and 0 <= self.y < self.chessboard_length:
             return False
         else:
             return True
@@ -31,28 +31,28 @@ class pos:
         return pos(self.x, self.y)
 
     def xp(self):  # x+1
-        if 0 <= self.x < self.size_of_chessboard-1:
+        if 0 <= self.x < self.chessboard_length-1:
             self.x += 1
         else:
             self.illegal()
         return self.copy()
 
     def xs(self):  # x-1
-        if self.size_of_chessboard > self.x > 0:
+        if self.chessboard_length > self.x > 0:
             self.x -= 1
         else:
             self.illegal()
         return self.copy()
 
     def yp(self):  # y+1
-        if 0 <= self.y < self.size_of_chessboard-1:
+        if 0 <= self.y < self.chessboard_length-1:
             self.y += 1
         else:
             self.illegal()
         return self.copy()
 
     def ys(self):  # y-1
-        if self.size_of_chessboard > self.y > 0:
+        if self.chessboard_length > self.y > 0:
             self.y -= 1
         else:
             self.illegal()
